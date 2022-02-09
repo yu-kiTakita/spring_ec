@@ -1,5 +1,31 @@
-CREATE TABLE IF NOT EXISTS employee(
-id VARCHAR(50)PRIMARY KEY,
-name VARCHAR(50),
-age INT
+CREATE TABLE IF NOT EXISTS m_item (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(256)  DEFAULT NULL,
+  detail text ,
+  price INT DEFAULT NULL,
+  file_name VARCHAR(256)  DEFAULT NULL
+);
+
+
+CREATE TABLE IF NOT EXISTS t_buy (
+  id INT NOT NULL AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  total_price INT NOT NULL,
+  delivery_method_id INT NOT NULL,
+  create_date DATETIME NOT NULL
+);
+
+CREATE TABLE t_buy_detail (
+  id INT NOT NULL AUTO_INCREMENT,
+  buy_id INT NOT NULL,
+  item_id INT NOT NULL
+);
+
+CREATE TABLE t_user (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(256)  DEFAULT NULL,
+  address VARCHAR(256)  DEFAULT NULL,
+  login_id VARCHAR(256)  DEFAULT NULL,
+  login_password VARCHAR(256)  DEFAULT NULL,
+  create_date date DEFAULT NULL
 );
