@@ -18,24 +18,14 @@
 
 <body>
   <!-- header -->
-  <div th:include="common/head.html"></div>
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br> <br>
-      <h1 class="header center red-text">ECサイト</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">なんでも買える魔法のサイト</h5>
-      </div>
-      <div class="row center">
-        <div class="input-field col s8 offset-s2">
-          <form action="/ItemSearchResult" method="get">
-            <i class="material-icons prefix">search</i> <input type="text" name="search_word">
-          </form>
-        </div>
-      </div>
-      <br> <br>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <form action="/ItemSearchResult" method="get">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
-  </div>
+  </nav>
 
   <div class="container">
     <div class="row center">
@@ -63,8 +53,6 @@
   </div>
   </div>
   </div>
-
-  <div th:include="common/footer.html"></div>
 </body>
 
 </html>

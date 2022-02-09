@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.thymeleaf.util.StringUtils;
 
-import spring_ec.UW001.SignupController;
 
 @Controller
 public class U001Action {
@@ -16,7 +15,7 @@ public class U001Action {
 	@Autowired
 	private U001Facade facade;
 	
-	Logger log = LoggerFactory.getLogger(SignupController.class);
+	Logger log = LoggerFactory.getLogger(U001Action.class);
 	
 	@GetMapping("/Index")
 	public String getIndex(Model model) {

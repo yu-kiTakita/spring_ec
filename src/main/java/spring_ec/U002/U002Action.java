@@ -7,15 +7,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import spring_ec.UW001.SignupController;
-
 @Controller
 public class U002Action {
 
 	@Autowired
 	private U002Facade facade;
 
-	Logger log = LoggerFactory.getLogger(SignupController.class);
+	Logger log = LoggerFactory.getLogger(U002Action.class);
 
 	@RequestMapping("/ItemSearchResult")
 	public String ItemSearch(Model model) {
